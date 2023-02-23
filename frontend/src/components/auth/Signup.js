@@ -17,7 +17,7 @@ function Signup({isAuthenticated, setIsAuthenticated}) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('fgfgaf/api/auth/signup', {username, password});
+      const response = await axios.post('http://100.26.161.20:3001/api/auth/signup', {username, password});
       sessionStorage.setItem('token', response.data.token);
       sessionStorage.setItem('name', response.data.username);
       setIsAuthenticated(true);
